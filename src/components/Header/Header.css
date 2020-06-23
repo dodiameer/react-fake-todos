@@ -1,0 +1,41 @@
+@media only screen and (max-width: 360px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 5em;
+        background: #22333B;
+        color: #ffffff;
+    }
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    height: 6em;
+    background: #22333B;
+    color: #ffffff;
+}
+.header-name-container {
+    text-align: center;
+}
+.header-name {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0 0.5em;
+    text-align: left;
+}
+.header-link-container {
+    margin-left: auto;
+    padding: 0 1em;
+}
+.header-link {
+    color: #ffffff;
+    padding: 0.5em;
+    border-bottom: 0px solid #ffffff;
+}
+.header-link:hover {
+    border-width: 1px;
+}
+
