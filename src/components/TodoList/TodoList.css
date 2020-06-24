@@ -4,3 +4,21 @@
     gap: 2em;
     padding-bottom: 5em;
 }
+.form {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+}
+.form>* {
+    display: inline-block;
+}
+.form input {
+    border: 2px solid grey;
+    border-radius: 1em;
+    padding: 1em;
+    transition: all 0.2s linear;
+}
+.form input:focus {
+    border-color: #22333B;
+    box-shadow: 0 0.5em 0.75em #22333B;
+}

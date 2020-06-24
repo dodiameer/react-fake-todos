@@ -5,12 +5,16 @@ class TodoItem extends React.Component {
     constructor() {
         super()
         this.state = {
-            todo: {}
+            todo: {},
+            user: {}
         }
         this.toggleCompleted = this.toggleCompleted.bind(this)
     }
 
     componentDidMount() {
+        fetch(`https://jsonplaceholder.typicode.com/users/${this.props.todo.userId}`)
+        .then(r => r.json())
+        .then(d => this.setState({user: d}))
         this.setState({ todo: this.props.todo })
     }
 
@@ -25,8 +29,9 @@ class TodoItem extends React.Component {
     render() {
         return (
             <div className="todo-item">
+                <h4>@{this.state.user.username}</h4>
                 <h3>{this.state.todo.title}</h3>
-                <h5>Id: {this.state.todo.id}</h5>
+                <h5>Id: {this.state.todo.id} / User Id: {this.state.todo.userId}</h5>
                 <span>{this.state.todo.completed ? "✔️" : "❌"}</span>
                 <button onClick={this.toggleCompleted}>
                     Mark as {this.state.todo.completed ? "incompleted" : "completed"}
