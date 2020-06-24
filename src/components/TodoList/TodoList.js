@@ -13,7 +13,7 @@ class TodoList extends React.Component {
     componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/todos")
         .then(res => res.json())
-        .then(data => this.setState({todos: data}))
+        .then(data => this.setState({todos: data.slice(0, 20)}))
     }
 
     render() {
