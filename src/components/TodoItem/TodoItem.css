@@ -1,0 +1,30 @@
+.todo-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin: 1em auto;
+    width: 60%;
+    border: 2px solid grey;
+    border-radius: 1em;
+    box-shadow: 0 0.5em 0.75em rgb(184, 184, 184);
+    transition: all 0.2s linear;
+}
+.todo-item:hover {
+    border-color: #22333B;
+    box-shadow: 0 0.5em 0.75em #22333B;
+}
+.todo-item>button {
+    padding: 0.75em;
+    margin: 2em 1em 1em 1em;
+    width: 50%;
+    border: 2px solid grey;
+    border-radius: 1em;
+    box-shadow: 0 0.5em 0.75em rgb(184, 184, 184);
+}
+.todo-item>button:active {
+    border-color: #22333B;
+    box-shadow: inset 0 0 0.3em #22333B;
+}

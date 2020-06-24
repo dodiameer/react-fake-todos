@@ -5,13 +5,16 @@ class TodoItem extends React.Component {
     constructor() {
         super()
         this.state = {
-            todo: this.props.todo
+            todo: {}
         }
         this.toggleCompleted = this.toggleCompleted.bind(this)
     }
 
+    componentDidMount() {
+        this.setState({ todo: this.props.todo })
+    }
+
     toggleCompleted() {
-        console.log("debug")
         this.setState(p => {
             return {
                 todo: {...p.todo, completed: !p.todo.completed}
